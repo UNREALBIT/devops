@@ -20,6 +20,6 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag  ${{ secrets.DOCKER_HUB_USERNAME }}/webapp:latest
+      run: docker build . --file Dockerfile --tag  ${{ secrets.DOCKER_HUB_USERNAME }}/site
     - name: Push image
       run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/webap:latest
